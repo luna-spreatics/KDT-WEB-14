@@ -1,28 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Practice</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 실습 1 -->
     <h1>Cafe Hello World</h1>
     <ul>
-        <li>
-            <h2>아이스 아메리카노</h2>
-            <i>4,000원</i>
-        </li>
-        <li>
-            <h2>아이스 카페라테</h2>
-            <i>4,500원</i>
-        </li>
-        <li>
-            <h2>아이스 바닐라라떼</h2>
-            <i>4,500원</i>
-        </li>
+      <li>
+        <h2>아이스 아메리카노</h2>
+        <i>4,000원</i>
+      </li>
+      <li>
+        <h2>아이스 카페라테</h2>
+        <i>4,500원</i>
+      </li>
+      <li>
+        <h2>아이스 바닐라라떼</h2>
+        <i>4,500원</i>
+      </li>
     </ul>
-    <hr>
+    <hr />
     <p>아이스 아메리카노 : ~</p>
-</body>
+
+    <!-- 실습 2 -->
+    <form>
+      <h4>설문 조사</h4>
+      이름<input type="text" /><br />
+      이메일<input type="email" placeholder="love@example.com" /><br />
+
+      <h4>나이</h4>
+      <input type="radio" name="age" value="10대" />10대
+      <input type="radio" name="age" value="20대" />20대
+      <input type="radio" name="age" value="30대" />30대
+      <input type="radio" name="age" value="40대" />40대
+
+      <h4>원하는 강의(복수응답 가능)</h4>
+      <input type="checkbox" name="lecture" value="html" />html
+      <input type="checkbox" name="lecture" value="css" />css
+      <input type="checkbox" name="lecture" value="javascript" />javascript
+      <br />
+      <textarea
+        cols="100"
+        rows="10"
+        placeholder="하고싶은 말을 써주세요 :)"
+      ></textarea>
+      <input type="button" value="제출" />
+      <!-- form 태그 안에서 button 태그의 기본 타입이 submit, 새로고침 발생 -->
+      <button type="submit">제출</button>
+    </form>
+
+    <!-- 실습 3 -->
+    <table border="1" cellspacing="0" cellpadding="5">
+      <tr>
+        <td colspan="3">1</td>
+        <td rowspan="2">2</td>
+      </tr>
+      <tr>
+        <td rowspan="2">3</td>
+        <td colspan="2">center</td>
+      </tr>
+      <tr>
+        <td colspan="3">4</td>
+      </tr>
+    </table>
+
+    <!-- 실습 4 -->
+    <table border="1" cellspacing="0" cellpadding="5">
+      <tr>
+        <th>구분</th>
+        <th>음료</th>
+        <th>가격</th>
+        <th>이미지</th>
+      </tr>
+      <tr>
+        <td rowspan="2">커피류</td>
+        <td>아메리카노</td>
+        <td rowspan="2">4200원</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=106509"
+            target="_blank"
+          >
+            <img
+              src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[106509]_20210430111852999.jpg"
+              alt="americano"
+              width="100px"
+              height="100px"
+            />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>아메리카노</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=106509"
+            target="_blank"
+          >
+            <img
+              src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[106509]_20210430111852999.jpg"
+              alt="americano"
+              width="100px"
+              height="100px"
+            />
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>

@@ -92,5 +92,56 @@
         </optgroup>
       </select>
     </form>
+    <hr />
+    <!-- table -->
+    <!-- rowspan : 해당 칸이 점유하는 행의 수 지정 -->
+    <!-- colspan : 해당 칸이 점유하는 열의 수 지정 -->
+    <table border="1" cellspacing="0" cellpadding="5" width="300" height="100">
+      <tr>
+        <th>이름</th>
+        <th>나이</th>
+        <th>전화번호</th>
+      </tr>
+      <tr>
+        <td>루나</td>
+        <td>100</td>
+        <td>010-8888-1234</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">홍길동</td>
+        <td colspan="2">100</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>010-1234-1234</td>
+      </tr>
+    </table>
+
+    <!-- semantic tag -->
+    <header>
+      <nav>
+        <ul>
+          <li><a>menu 1</a></li>
+          <li><a>menu 2</a></li>
+          <li><a>menu 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>경제</h2>
+        <article></article>
+        <article></article>
+        <article></article>
+      </section>
+      <section>
+        <h2>사회</h2>
+        <article></article>
+        <article></article>
+        <article></article>
+      </section>
+    </main>
+    <footer>footer</footer>
   </body>
 </html>
