@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex practice</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: coral;
+        display: flex;
+
+        /* 두줄이 되도록 */
+        /* flex-wrap: wrap; */
+      }
+
+      .container div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      .nowrap {
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .wrap {
+        background-color: aliceblue;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div> -->
+
+    <!-- flex 7번 -->
+    <div class="container nowrap">
+      <div>item1</div>
+      <div>item2</div>
+      <div>item3</div>
+      <div>item4</div>
+      <div>item5</div>
+      <div>item6</div>
+      <div>item7</div>
+      <div>item8</div>
+    </div>
+
+    <div class="container wrap">
+      <div>item1</div>
+      <div>item2</div>
+      <div>item3</div>
+      <div>item4</div>
+      <div>item5</div>
+      <div>item6</div>
+      <div>item7</div>
+      <div>item8</div>
+    </div>
+  </body>
+</html>

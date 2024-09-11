@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      div {
+        width: 300px;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+
+      .grad-1 {
+        background: linear-gradient(grey, tomato);
+      }
+      .grad-2 {
+        background: linear-gradient(90deg, grey, tomato);
+        /* background: linear-gradient(to left, grey, tomato); */
+      }
+      .grad-3 {
+        background: linear-gradient(90deg, grey, 75%, tomato);
+      }
+      .grad-4 {
+        background: linear-gradient(green, gray, tomato);
+      }
+
+      /* background-image */
+      .background-image {
+        background-color: orange;
+        background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+        width: 500px;
+        height: 500px;
+
+        /* background-repeat */
+        background-repeat: repeat; /* default */
+        background-repeat: repeat-x;
+        background-repeat: repeat-y;
+        background-repeat: no-repeat;
+
+        /* background-position */
+        background-position: left top;
+        background-position: center;
+        background-position: 10px 10px; /* x축, y축 */
+        /* 숫자값을 하나만 입력하면 x축에 대해서만 적용 */
+        background-position: 300px;
+
+        /* background-size */
+        /* cover: 더 넓은 값에 맞춤, contain: 더 짧은 값에 맞춤 */
+        background-size: auto; /* default */
+        background-size: 100px;
+        background-size: 100px 50px;
+        background-size: cover;
+        background-size: contain;
+      }
+
+      .scroll {
+        background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+        overflow: scroll;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 500px;
+        /* background-attachment : 요소의 배경 이미지 스크롤 특성 */
+        background-attachment: scroll; /* default */
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grad-1"></div>
+    <div class="grad-2"></div>
+    <div class="grad-3"></div>
+    <div class="grad-4"></div>
+
+    <hr />
+
+    <div class="background-image"></div>
+    <div class="scroll">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda
+      quibusdam accusantium, itaque saepe, suscipit quod a perferendis alias
+      ullam quidem dicta qui quisquam eligendi incidunt nesciunt corporis,
+      provident nihil. Quam saepe sed blanditiis impedit quo! In tempora, labore
+      recusandae neque maxime mollitia distinctio dolores deleniti quam porro
+      deserunt excepturi necessitatibus consectetur accusantium minima. Earum et
+      nam nostrum animi molestias. Ducimus beatae unde hic illo. In minima,
+      dolor commodi repudiandae exercitationem at sed fugit omnis non laudantium
+      voluptatum quidem dignissimos esse similique minus error aut hic. Suscipit
+      accusantium est reiciendis. Accusantium asperiores recusandae, mollitia
+      accusamus fugiat magnam vel provident libero aut, temporibus, a distinctio
+      numquam dolorem? Error debitis reprehenderit dignissimos laboriosam
+      praesentium sapiente recusandae, ducimus quis illo assumenda? Ea,
+      adipisci. Repudiandae magnam assumenda eum dignissimos consectetur
+      exercitationem rerum, sed aliquid sequi consequuntur atque unde, animi sit
+      dolores? Adipisci quae ex id dicta tempora reiciendis, fugiat, ipsa,
+      provident ratione modi reprehenderit? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Laborum assumenda quibusdam accusantium,
+      itaque saepe, suscipit quod a perferendis alias ullam quidem dicta qui
+      quisquam eligendi incidunt nesciunt corporis, provident nihil. Quam saepe
+      sed blanditiis impedit quo! In tempora, labore recusandae neque maxime
+      mollitia distinctio dolores deleniti quam porro deserunt excepturi
+      necessitatibus consectetur accusantium minima. Earum et nam nostrum animi
+      molestias. Ducimus beatae unde hic illo. In minima, dolor commodi
+      repudiandae exercitationem at sed fugit omnis non laudantium voluptatum
+      quidem dignissimos esse similique minus error aut hic. Suscipit
+      accusantium est reiciendis. Accusantium asperiores recusandae, mollitia
+      accusamus fugiat magnam vel provident libero aut, temporibus, a distinctio
+      numquam dolorem? Error debitis reprehenderit dignissimos laboriosam
+      praesentium sapiente recusandae, ducimus quis illo assumenda? Ea,
+      adipisci. Repudiandae magnam assumenda eum dignissimos consectetur
+      exercitationem rerum, sed aliquid sequi consequuntur atque unde, animi sit
+      dolores? Adipisci quae ex id dicta tempora reiciendis, fugiat, ipsa,
+      provident ratione modi reprehenderit?
+    </div>
+  </body>
+</html>
