@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice</title>
+    <style>
+      img {
+        transform: skewY(20deg);
+        position: absolute;
+      }
+      #id1 {
+        top: 200px;
+        left: 100px;
+        z-index: 2;
+      }
+      #id2 {
+        top: 200px;
+        left: 350px;
+        z-index: 1;
+      }
+      #id3 {
+        top: 200px;
+        left: 600px;
+      }
+
+      /* 2번 */
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        color: white;
+        overflow: auto;
+        transition: all 1s linear 0.5s;
+      }
+      .box:hover {
+        width: 300px;
+        height: 300px;
+      }
+
+      /* 3번 */
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: pink;
+
+        position: relative;
+
+        animation-name: move;
+        animation-iteration-count: 6;
+        animation-duration: 3s;
+      }
+
+      @keyframes move {
+        0% {
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          left: 500px;
+          top: 0px;
+        }
+        50% {
+          left: 500px;
+          top: 500px;
+        }
+        75% {
+          left: 0px;
+          top: 500px;
+        }
+        100% {
+          left: 0px;
+          top: 0px;
+        }
+      }
+
+      /* 4번 */
+      p {
+        animation: slidein 3s;
+      }
+
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img
+      id="id1"
+      src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"
+    />
+    <img
+      id="id2"
+      src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"
+    />
+    <img
+      id="id3"
+      src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"
+    /> -->
+
+    <!-- 2번 -->
+    <!-- <h1>Transition 실습</h1>
+    <div class="box">
+      안녕하세요! 코딩온 실습을 시작합니다. 이번 실습은 CSS의 Transition을
+      이용한 실습으로 해당 박스에 마우스를 올려놓으면 확대가 됩니다.
+    </div> -->
+
+    <!-- 3번 -->
+    <!-- <div class="ball"></div> -->
+
+    <!-- 4번 -->
+    <p>
+      "As I relax on the sofa and gaze around a room a thought hits me: this is
+      exactly the place I've been looking for all my life. A little hideaway in
+      some sinkhole somewhere. I'd always thought of it as a secret, imaginary
+      place, and can barely believe that it actually exists. I close my eyes and
+      take a breath, and wonder of it all settles over me like a gentle cloud."
+    </p>
+  </body>
+</html>
