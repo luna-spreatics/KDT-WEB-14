@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media query practice</title>
+
+    <style>
+      /* 1번 */
+      @media screen and (max-width: 300px) {
+        body {
+          background-color: orange;
+        }
+      }
+
+      @media screen and (min-width: 500px) {
+        body {
+          background-color: skyblue;
+        }
+      }
+
+      @media screen and (max-height: 300px) {
+        p {
+          font-family: Georgia, "Times New Roman", Times, serif;
+        }
+      }
+
+      @media screen and (min-height: 500px) {
+        p {
+          background-color: green;
+        }
+      }
+
+      /* 2번 */
+      .container {
+        display: flex;
+      }
+
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        margin: 15px;
+        border-radius: 10px;
+        border: 1px solid red;
+      }
+
+      @media screen and (max-width: 700px) {
+        .container {
+          display: block;
+        }
+        .item {
+          background-color: skyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1번 -->
+    <p>미디어 쿼리 실습</p>
+
+    <!-- 2번 -->
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
