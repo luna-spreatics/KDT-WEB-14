@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice</title>
+
+    <script>
+      // 1번
+      let colors = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "navy",
+        "purple",
+      ];
+
+      // console.log(출력할 값)
+      // conso.log("fd"); // error
+      // console.log("dfdf"); // error 난 뒤의 값은 출력X
+
+      console.log(colors[2]); // index 2
+      colors.push("black");
+      console.log(colors);
+      console.log(colors.indexOf("black")); // "black" 요소의 index 반환
+      console.log(colors.reverse());
+
+      // 2번
+      console.log("-----------------------------");
+      console.log(`${typeof 1} isn't ${typeof "1"} data type`);
+      console.log(
+        `typeof를 array나 null에 사용하면 ${typeof null} 결과를 얻을 수 있습니다.`
+      );
+
+      // 4번
+      let mathScore = "77";
+      let engScore = "88";
+
+      let avgScore = (Number(mathScore) + Number(engScore)) / 2;
+      console.log(avgScore);
+    </script>
+  </head>
+  <body></body>
+</html>
