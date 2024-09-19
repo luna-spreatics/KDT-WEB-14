@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 실습</title>
+
+    <script>
+      // 1번
+      // for문 사용, if문 사용
+      // 10000 조건 설정
+      // 13의 배수 이면서 홀수 -> 그리고 and &&
+
+      // 1-1
+      // for (let i = 0; i < 10000; i++) {
+      //   if (i % 13 == 0 && i % 2 == 1) {
+      //     console.log(i);
+      //   }
+      // }
+
+      // 1-2
+      // for (let i = 0; i < 10000; i = i + 13) {
+      //   if (i % 2 == 1) {
+      //     console.log(i);
+      //   }
+      // }
+
+      // 2번
+      // 이중 for문
+
+      // 2 * 1 = 2
+      // 2 * 2 = 4
+      // ...
+      // 9 * 1 = 9
+      // 9 * 2 = 18
+      for (let i = 2; i < 10; i++) {
+        console.log(i + "단");
+        for (let j = 1; j < 10; j++) {
+          console.log(`${i} * ${j} = ${i * j}`);
+        }
+      }
+
+      // 3번
+      let sum = 0;
+      for (let i = 0; i < 100; i++) {
+        if (i % 2 == 0 || i % 5 == 0) sum += i;
+      }
+      console.log("sum: ", sum);
+    </script>
+  </head>
+  <body></body>
+</html>
