@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let fruits1 = [
+        "사과",
+        "딸기",
+        "파인애플",
+        "수박",
+        "참외",
+        "오렌지",
+        "자두",
+        "망고",
+      ];
+      let fruits2 = ["수박", "사과", "참외", "오렌지", "파인애플", "망고"];
+
+      /* 1. for 문 이용 */
+      let same = [];
+      let diff = [];
+
+      // 동일한 요소, 다른 요소 찾아야함
+      for (let i = 0; i < fruits1.length; i++) {
+        if (fruits2.includes(fruits1[i])) {
+          same.push(fruits1[i]);
+        } else {
+          diff.push(fruits1[i]);
+        }
+      }
+      console.log(same);
+      console.log(diff);
+
+      /* 2. filter 와 includes 이용 */
+      let same2 = fruits1.filter((fr) => fruits2.includes(fr));
+      let diff2 = fruits1.filter((fr) => !fruits2.includes(fr));
+
+      console.log(same2);
+      console.log(diff2);
+    </script>
+  </head>
+  <body></body>
+</html>
