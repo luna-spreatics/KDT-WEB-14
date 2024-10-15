@@ -60,6 +60,21 @@ app.get("/practice1", (req, res) => {
   res.render("practice1");
 });
 
+app.get("/practice1-get", (req, res) => {
+  console.log(req.query);
+  console.log(req.params);
+  res.json(req.query);
+});
+
+app.post("/practice2", (req, res) => {
+  console.log(req.body);
+  if (userInfo.id === req.body.userId && userInfo.pw === req.body.userPw) {
+    res.json({ userInfo: req.body, isSuccess: true });
+  } else {
+    res.json({ isSuccess: false });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`port is opening on ${PORT}`);
 });
