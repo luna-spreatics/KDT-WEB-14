@@ -21,9 +21,13 @@ const uploadDetail = multer({
     },
     filename(req, file, done) {
       const ext = path.extname(file.originalname); // 파일 "확장자"를 추출
-      console.log("ext", ext);
-      console.log(path.basename(file.originalname, ext));
-      done(null, path.basename(file.originalname, ext) + Date.now() + ext);
+      // console.log("ext", ext);
+      // console.log(path.basename(file.originalname, ext));
+      // done(null, path.basename(file.originalname, ext) + Date.now() + ext);
+
+      // 실습
+      console.log("file name > req.body", req.body);
+      done(null, req.body.id + ext);
     },
     // limits : 파일 제한 정보
     limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
@@ -93,6 +97,16 @@ app.post(
 app.post("/dynamicFile", uploadDetail.single("dynamicUserFile"), (req, res) => {
   console.log(req.file);
   res.send(req.file);
+});
+
+// 실습
+app.get("/practice", (req, res) => {
+  res.render("practice");
+});
+
+app.post("/upload/practice", uploadDetail.single("profile"), (req, res) => {
+  console.log(req.file);
+  res.render("result", { user: req.body, profile: req.file.path });
 });
 
 app.listen(PORT, () => {
