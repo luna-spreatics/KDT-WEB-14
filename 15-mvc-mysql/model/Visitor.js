@@ -48,4 +48,31 @@ const postVisitor = async (name, comment) => {
   return rows;
 };
 
-module.exports = { getVisitors, postVisitor };
+const getVisitor = async (id) => {
+  const query = "SELECT * FROM visitor WHERE id = ?";
+  const [row] = await pool.query(query, [id]);
+  console.log(row);
+  return row;
+};
+
+const patchVisitor = async ({ name, comment, id }) => {
+  const query = "UPDATE visitor SET name = ?, comment = ? WHERE id = ?";
+  const [result] = await pool.query(query, [name, comment, id]);
+  console.log("update result", result);
+  return result;
+};
+
+const deleteVisitor = async (id) => {
+  const query = "DELETE FROM visitor WHERE id = ?";
+  const [result] = await pool.query(query, [id]);
+  console.log("delete result", result);
+  return result;
+};
+
+module.exports = {
+  getVisitors,
+  postVisitor,
+  getVisitor,
+  patchVisitor,
+  deleteVisitor,
+};

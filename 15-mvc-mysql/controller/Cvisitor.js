@@ -23,7 +23,40 @@ const post_visitor = async (req, res) => {
 
   const data = await Visitor.postVisitor(name, comment);
   console.log(data);
-  res.send("fd");
+  res.json({ id: data.insertId, name, comment });
 };
 
-module.exports = { main, get_visitors, post_visitor };
+// GET /visitor or /visitor/:id
+const get_visitor = async (req, res) => {
+  console.log(req.query);
+  console.log(req.params);
+
+  // const data = await Visitor.getVisitor(req.query.id);
+  const data = await Visitor.getVisitor(req.params.id);
+  res.json(data[0]);
+};
+
+// PATCH /visitor
+const patch_visitor = async (req, res) => {
+  console.log(req.body);
+
+  const data = await Visitor.patchVisitor(req.body);
+  res.json({ result: true });
+};
+
+// DELETE /visitor
+const delete_visitor = async (req, res) => {
+  console.log(req.body);
+
+  const data = await Visitor.deleteVisitor(req.body.id);
+  res.json({ result: true });
+};
+
+module.exports = {
+  main,
+  get_visitors,
+  post_visitor,
+  get_visitor,
+  patch_visitor,
+  delete_visitor,
+};
