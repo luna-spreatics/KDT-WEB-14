@@ -26,7 +26,6 @@ function getUsersInRoom(room) {
       // 특정 소켓 ID에 해당하는 클라이언트 소켓 정보 가져오기
       const socket = io.sockets.sockets.get(socketId);
       const nickname = socket.user || "알수없음";
-
       const info = { nickname, key: socketId };
       users.push(info);
     }
@@ -65,7 +64,10 @@ io.on("connection", (socket) => {
       roomList.push(roomName);
       io.emit("updateRoom", roomList);
     }
-    getUsersInRoom(roomName);
+
+    // 채팅방에 있는 모든 유저를 조회해서 전송
+    const usersInRoom = getUsersInRoom(roomName);
+    io.to(roomName).emit("userList", usersInRoom);
     cb();
   });
 
@@ -90,14 +92,15 @@ io.on("connection", (socket) => {
     }
   });
 
-  socket.on("send", ({ dm, myNick, msg }) => {
+  socket.on("send", ({ dm, nick, msg, room }) => {
     // dm === all 이면 전체 발송
     // 그외 DM 발송
+    console.log(dm, nick, msg, room);
     if (dm === "all") {
-      io.emit("showMessage", { nick: myNick, msg });
+      io.to(room).emit("showMessage", { nick, msg });
     } else {
       const data = {
-        nick: myNick,
+        nick,
         msg: msg,
         dm: "(DM) ",
       };
